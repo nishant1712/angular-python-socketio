@@ -1,0 +1,19 @@
+version: '3.0'
+
+## Docker compose test file for UI Appdcmer
+
+services:
+
+
+  angular-socketio:
+    container_name: angular-socketio
+    build: './angular-socketio'
+    ports:
+      - "8080:80"
+
+
+  python-socketio:
+    container_name: python-socketio
+    build: './python-socketio'
+    ports:
+      - "8089:8089"
