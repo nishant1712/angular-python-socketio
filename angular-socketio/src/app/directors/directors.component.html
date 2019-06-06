@@ -1,0 +1,41 @@
+<div class="directors-container">
+    <div *ngIf="showDirectorsInfoAlert" class="alert alert-info alert-dismissible fade show" role="alert">
+        <strong>Info!</strong> Joined room <b>director</b> with namespace <b>/director</b>.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="row place_div_center">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-11">
+                    <h2>Directors</h2>
+                </div>
+                <div class="col-md-1 text-left">
+                    <button mat-mini-fab matTooltip="Add Director" color="primary" (click)="addDirector()">
+                        <mat-icon>add</mat-icon>
+                    </button>
+                </div>
+            </div>
+            <div class="directors-list">
+                <ul class="directors">
+                    <li *ngFor="let director of directors; let i = index;">
+                        <div class="row">
+                            <div class="col-md-11">
+                                <mat-card routerLink="/movies/{{i}}">
+                                    {{director.name}}, Movie Count: {{director.value.length}}
+                                </mat-card>
+                            </div>
+                            <div class="col-md-1">
+                                <button mat-mini-fab matTooltip="Remove Director" color="warn" (click)="removeDirector(i)">
+                                    <mat-icon>remove</mat-icon>
+                                </button>
+                            </div>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

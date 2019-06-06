@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Add New Movie</h1>
+
+<form [formGroup]="newMovieForm" (ngSubmit)="closeDialog()">
+<mat-dialog-content>
+  <mat-form-field class="full-width" appearance="outline">
+    <mat-label>Movie Name</mat-label>
+    <input matInput formControlName="movieName">
+  </mat-form-field>
+  <mat-form-field class="full-width" appearance="outline">
+    <mat-label>IMDb Rating</mat-label>
+    <input matInput formControlName="imdbRating">
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-raised-button mat-dialog-close>Cancel</button>
+  <button mat-raised-button type="submit" [disabled]="!newMovieForm.valid" color="primary">OK</button>
+</mat-dialog-actions>
+</form>
