@@ -13,12 +13,12 @@ https://docs.docker.com/compose/install/
 
 Once the above installation is done, clone the project and run the below commands after opening the terminal in the project directory
 
-Docker Compose Build Command:
+    Docker Compose Build Command:
 
-docker-compose -f docker-compose.yml build
+    docker-compose -f docker-compose.yml build
 
-Docker Compose Up Command:
+    Docker Compose Up Command:
 
-docker-compose -f docker.compose.yml up
+    docker-compose -f docker.compose.yml up
 
 Once the above commands are successfully executed, access the application with URL http://localhost:8080
